@@ -1,86 +1,82 @@
 # Dorsa-Mehditabar-Personal-Programming-Code-Example
-Diabetes Prediction using Machine Learning and Quantum Computing
+# Diabetes Prediction using Machine Learning and Quantum Computing
 
 A machine learning project focused on predicting diabetes using healthcare data from the NHANES dataset.
-This project includes data preprocessing, imbalance handling with SMOTE, classical machine learning models, performance evaluation, and initial experimentation with Quantum Machine Learning using Qiskit.
 
-Project Overview
+This project includes:
+- Data preprocessing
+- Missing value handling
+- Imbalanced dataset treatment using SMOTE
+- Model training and evaluation
+- Data visualization
+- Initial exploration of Quantum Machine Learning using Qiskit
 
-The goal of this project is to build a reliable diabetes prediction system using patient healthcare data.
+---
+
+# Project Overview
+
+The main goal of this project is to build a reliable diabetes prediction model using healthcare-related features.
+
 The workflow includes:
+- Data cleaning and preprocessing
+- Feature scaling
+- Handling imbalanced data
+- Training machine learning models
+- Evaluating model performance
+- Exploring Quantum Machine Learning approaches
 
-Data cleaning and preprocessing
-Missing value handling
-Feature scaling
-Imbalanced dataset treatment
-Model training and evaluation
-Visualization of results
-Exploration of Quantum Machine Learning techniques
-Dataset
+---
 
-The project uses healthcare-related data containing features such as:
+# Dataset
 
-Age
-BMI
-Blood Pressure
-Dietary Information
-Alcohol Consumption
-Other medical indicators
+The dataset contains healthcare-related information such as:
 
-Target variable:
+- Age
+- BMI
+- Blood Pressure
+- Dietary Information
+- Alcohol Consumption
+- Other medical indicators
 
-Diabetes (Binary Classification)
-Technologies Used
-Programming Language
-Python
-Libraries
-Pandas
-NumPy
-Scikit-learn
-Imbalanced-learn (SMOTE)
-Matplotlib
-Seaborn
-Qiskit
-Qiskit Machine Learning
-Machine Learning Pipeline
-1. Data Loading
+Target Variable:
+- `Diabetes`
 
-The dataset is loaded using Pandas and inspected for structure, missing values, and feature types.
+This is a binary classification problem.
 
-2. Data Preprocessing
-Missing values handled using SimpleImputer
-Feature normalization using MinMaxScaler
-3. Train-Test Split
+---
 
-The dataset is divided into training and testing sets using stratified sampling to preserve class distribution.
+# Technologies Used
 
-4. Handling Imbalanced Data
+## Programming Language
+- Python
 
-SMOTE (Synthetic Minority Oversampling Technique) is used to balance diabetic and non-diabetic classes.
+## Libraries
+- pandas
+- numpy
+- scikit-learn
+- imbalanced-learn
+- matplotlib
+- seaborn
+- qiskit
+- qiskit-machine-learning
 
-5. Model Training
+---
 
-A RandomForestClassifier is trained on the processed dataset.
+# Machine Learning Pipeline
 
-6. Model Evaluation
+## 1. Data Loading
 
-Evaluation metrics include:
+The dataset is loaded using pandas and inspected to understand:
+- Data structure
+- Feature types
+- Missing values
 
-Accuracy
-Precision
-Recall
-F1-score
-Confusion Matrix
-7. Visualization
+---
 
-Model performance and classification results are visualized using Seaborn and Matplotlib.
+## 2. Data Preprocessing
 
-Quantum Machine Learning Exploration
+### Missing Value Handling
+Missing numerical values are handled using:
 
-This project also explores the integration of Quantum Machine Learning using Qiskit.
-
-Planned/experimental components include:
-
-Quantum Support Vector Classifier (QSVC)
-Quantum Kernels
-Hybrid Classical-Quantum Workflows
+```python
+SimpleImputer(strategy='mean')
